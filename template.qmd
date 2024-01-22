@@ -5,7 +5,7 @@ title: |
 subtitle: "`r params$module_code`: `r params$module_name`"
 author: "`r params$author` (<`r params$email`>)"
 format:
-  unnc_lab_sheet-pdf: default
+  unnc_task_sheet-pdf: default
 date: last-modified
 engine: knitr
 
