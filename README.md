@@ -20,11 +20,12 @@ Additionally, the following fonts are required:
 To install these on Mac:
 
 ```bash
-brew tap homebrew/cask-fonts font-ubuntu  font-ubuntu-mono font-fira-code font-fira-sans font-fira-mono
+brew tap homebrew/cask-fonts 
+brew install font-ubuntu  font-ubuntu-mono font-fira-code font-fira-sans font-fira-mono
 ```
 
 ## Acknowledgements
 
-This template draws heavily on the excellent [PrettyPDF](https://github.com/nrennie/PrettyPDF) by [Neil Rennie]([https://github.com/nrennie).
+This template draws heavily on the excellent [PrettyPDF](https://github.com/nrennie/PrettyPDF) by [Neil Rennie](https://github.com/nrennie).
 
 Much of the styling is based on the University of Nottingham's [brand guidelines](https://www.nottingham.ac.uk/brand/).
