@@ -1,0 +1,113 @@
+% Load packages
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{listings}
+\usepackage{lstfiracode}
+\usepackage{setspace}
+
+% Set monospace font with contextual alternates
+\setmonofont{Fira Code}[Contextuals=Alternate]
+
+\setsansfont{Ubuntu}[
+    Scale=0.9,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+]
+\setmainfont{Ubuntu}[
+    Scale=0.9,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+]
+
+% Define page dimensions
+\geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, bottom=20mm, right=50mm}
+
+% Define custom colors - From UNNC Branding Guidelines
+\definecolor{NottinghamBlue}{RGB}{16, 38, 59}
+\definecolor{JubileeRed}{RGB}{185, 28, 46}
+\definecolor{MandarinOrange}{RGB}{249, 129, 9}
+\definecolor{RebelsGold}{RGB}{222, 180, 6}
+\definecolor{PioneeringPink}{RGB}{215, 51, 108}
+\definecolor{CivicPurple}{RGB}{121, 45, 133}
+\definecolor{ForestGreen}{RGB}{0, 95, 54}
+\definecolor{BramleyApple}{RGB}{147, 213, 0}
+\definecolor{TrentTurquoise}{RGB}{55, 180, 176}
+\definecolor{MalaysiaSkyBlue}{RGB}{0, 155, 193}
+\definecolor{PortlandStone}{RGB}{250, 246, 239}
+\definecolor{PortlandStone40p}{RGB}{253, 251, 249}
+
+% Define color styles
+\colorlet{light}{NottinghamBlue}
+\colorlet{dark}{NottinghamBlue}
+\colorlet{highlight}{MalaysiaSkyBlue}
+
+\colorlet{main-theme-color}{NottinghamBlue}
+\colorlet{page-number-color}{white}
+
+% Add border and logo
+\AddToShipoutPicture{%
+    % Right-side vertical bar
+    \AtPageLowerLeft{% 
+        \put(\LenToUnit{\dimexpr\paperwidth-3cm},0){% 
+            \color{main-theme-color}\rule{3cm}{\LenToUnit\paperheight}%
+        }%
+    }%
+    % Logo at the top right corner
+    \AtPageLowerLeft{% 
+        \put(\LenToUnit{\dimexpr\paperwidth-2.25cm},27.2cm){% 
+            \color{main-theme-color}\includegraphics[width=1.5cm]{_extensions/unnc_lab_sheet/asset/logo.png}
+        }%
+    }%
+}
+
+% Style page numbers
+\fancypagestyle{unncstyle}{
+    \fancyhf{}
+    \renewcommand\headrulewidth{0pt}
+    \fancyfoot[R]{\textcolor{page-number-color}{\thepage}}
+    \fancyfootoffset{3.5cm}
+}
+\setlength{\footskip}{20pt}
+
+% Style page numbers
+\fancypagestyle{unncstyle}{
+    \fancyhf{}
+    \renewcommand\headrulewidth{0pt}
+    \fancyfoot[R]{\textcolor{white}{\thepage}}
+    \fancyfootoffset{3.5cm}
+}
+\setlength{\footskip}{20pt}
+
+
+% Style chapter and section headings
+\chapterfont{\color{main-theme-color}\fontsize{20}{16.8}\selectfont}
+\sectionfont{\color{main-theme-color}\fontsize{20}{16.8}\selectfont}
+\subsectionfont{\color{main-theme-color}\fontsize{14}{16.8}\selectfont}
+\subsubsectionfont{\color{main-theme-color}\fontsize{12}{16.8}\selectfont}
+
+% Subsection title formatting
+\titleformat{\subsection}{
+    \sffamily\Large\bfseries
+}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+% Custom title command
+\makeatletter
+\renewcommand{\maketitle}{
+    \bgroup
+    \setlength{\parindent}{0pt}
+    \begin{flushleft}
+        {\sffamily\huge\textbf{\@title}} \vspace{0.3cm}\newline
+        {\Large \@subtitle}\vspace{0.3cm}\newline
+        \@author\vspace{0.1cm}\newline
+        \@date
+    \end{flushleft}
+    \egroup
+}
+\makeatother
