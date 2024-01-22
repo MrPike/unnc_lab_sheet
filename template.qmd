@@ -1,16 +1,38 @@
 ---
-title: UNNC Lab Sheet Template
-author: Matthew Pike
+title: |
+  | `r params$activity_type` `r params$lab_sheet_number`
+  | UNNC Task Sheet Template
+subtitle: "`r params$module_code`: `r params$module_name`"
+author: "`r params$author` (<`r params$email`>)"
 format:
-  UNNC_Lab_Sheet-pdf: default
+  unnc_lab_sheet-pdf: default
 date: last-modified
+engine: knitr
+
+params:
+  author: "Matthew Pike"
+  email: "matthew.pike@nottingham.edu"
+  activity_type: "Workshop"
+  module_code: "COMPXXXX"
+  module_name: "Module Name"
+  lab_sheet_number: "001"
+  lab_percentage: "X%"
+  due_date: "DD/MM/YYYY"
+  due_time: "HH:MM"
+  submission_point: "https://moodle.nottingham.ac.uk/..."
+  submission_format: "PDF"
 ---
 
-## Introduction
+## Overview
 
-*TODO* Create an example file that demonstrates the formatting and features of your format.
+## Tasks
 
-## More Information
+## Submission
++ Submission Deadline: `r params$due_date` at `r params$due_time`.
++ Submission Point: <`r params$submission_point`>
++ Submission Format: `r params$submission_format`
 
-You can learn more about controlling the appearance of PDF output here: <https://quarto.org/docs/output-formats/pdf-basics.html>
+Submit your work to the Lab `r params$lnumber` assignment on Moodle before the deadline. Remember that late submissions will be penalised with a mark of zero, as outlined in the coursework issue sheet.
 
+## Academic Integrity
+As a student, you are expected to submit original work for this activity. It is important to recognise that plagiarism, false authorship, and collusion constitute academic misconduct with defined procedures and penalties in place. While tools like ChatGPT can be beneficial, caution must be exercised  when utilising their outputs, especially when their use is not permitted. Any misuse or improper behavior will be addressed according to the university's policies on conduct as outlined at <https://www.nottingham.ac.uk/qualitymanual/assessment-awards-and-deg-classification/pol-academic-misconduct.aspx>.

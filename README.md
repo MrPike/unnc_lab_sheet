@@ -1,8 +1,8 @@
-# UNNC Lab Sheet Format
+# UNNC Task Sheet Format
 
 ## Overview
 
-A [Quarto](https://quarto.org) template for the UNNC Lab Sheet.
+A [Quarto](https://quarto.org) template/extension for UNNC Task Sheets.
 
 ## Installing
 
@@ -22,3 +22,9 @@ To install these on Mac:
 ```bash
 brew tap homebrew/cask-fonts font-ubuntu  font-ubuntu-mono font-fira-code font-fira-sans font-fira-mono
 ```
+
+## Acknowledgements
+
+This template draws heavily on the excellent [PrettyPDF](https://github.com/nrennie/PrettyPDF) by [Neil Rennie]([https://github.com/nrennie).
+
+Much of the styling is based on the University of Nottingham's [brand guidelines](https://www.nottingham.ac.uk/brand/).
