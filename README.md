@@ -2,12 +2,12 @@
 
 ## Overview
 
-A [Quarto](https://quarto.org) template/extension for UNNC Task Sheets.
+A [Quarto](https://quarto.org) template/extension for UNNC task sheets.
 
 ## Installing
 
 ```bash
-quarto use template mrpike/unnc_lab_sheet
+quarto use template mrpike/unnc_task_sheet
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your lab sheet.
