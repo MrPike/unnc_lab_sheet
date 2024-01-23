@@ -21,7 +21,7 @@ To install these on Mac:
 
 ```bash
 brew tap homebrew/cask-fonts 
-brew install font-ubuntu  font-ubuntu-mono font-fira-code font-fira-sans font-fira-mono
+brew install font-fira-code font-fira-sans font-fira-mono
 ```
 
 ## Acknowledgements

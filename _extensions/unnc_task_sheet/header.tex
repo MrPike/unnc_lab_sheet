@@ -10,21 +10,26 @@
 \usepackage{lstfiracode}
 \usepackage{setspace}
 
-% Set monospace font with contextual alternates
-\setmonofont{Fira Code}[Contextuals=Alternate]
+\setsansfont{Fira Sans Light}[
+    Scale=0.9,
+    ItalicFont={Fira Sans Light Italic},
+    BoldFont={Fira Sans},
+    BoldItalicFont={Fira Sans Italic}
+]
 
-\setsansfont{Ubuntu}[
+\setmonofont{Fira Code}[
     Scale=0.9,
-    UprightFont=*-Regular,
-    BoldFont=*-Bold,
-    ItalicFont=*-Italic,
+    BoldFont={Fira Mono Medium},
+    Contextuals=Alternate
 ]
-\setmainfont{Ubuntu}[
+
+\setmainfont{Fira Sans Light}[
     Scale=0.9,
-    UprightFont=*-Regular,
-    BoldFont=*-Bold,
-    ItalicFont=*-Italic,
+    ItalicFont={Fira Sans Light Italic},
+    BoldFont={Fira Sans},
+    BoldItalicFont={Fira Sans Italic}
 ]
+%
 
 % Define page dimensions
 \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, bottom=20mm, right=50mm}
